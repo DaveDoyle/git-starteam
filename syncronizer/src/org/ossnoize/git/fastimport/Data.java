@@ -62,7 +62,7 @@ public class Data implements FastImportObject {
 			Container.reset();
 		} else {
 			FileInputStream fin = new FileInputStream(file);
-			byte[] buffer = new byte[1024*64];
+			byte[] buffer = new byte[4096*20];
 			int read = fin.read(buffer);
 			while(read >= 0) {
 				out.write(buffer, 0, read);
